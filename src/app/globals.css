@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@heroui/styles"; 
+
+
 
 .gradient-primary {
   background: linear-gradient(90deg, #ef4444, #f87171);

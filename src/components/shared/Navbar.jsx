@@ -1,6 +1,8 @@
 import { Droplet } from 'lucide-react';
 import React from 'react';
 import Navlinks from './Navlinks';
+import { Button } from '@heroui/react';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -15,10 +17,12 @@ const Navbar = () => {
                 </div>
                 <ul className='flex items-center gap-5'>
                     <Navlinks href={'/'}>Home </Navlinks>
-                    <Navlinks href={'/all-donors'}>All Donors</Navlinks>
+                    <Navlinks href={'/all-donor'}>All Donors</Navlinks>
                     <Navlinks href={'/profile'}>Profile </Navlinks>
                 </ul>
-                <div>
+                <div className='flex items-center gap-3.5'>
+                        <Link href={'/login'}><Button variant='danger-soft'>Login</Button></Link>
+                        <Link href={'/register'}><Button variant='danger'>Register</Button></Link>
                 </div>
             </div>
         </nav>

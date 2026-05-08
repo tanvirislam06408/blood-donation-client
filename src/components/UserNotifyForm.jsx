@@ -1,9 +1,38 @@
+'use client'
+import { postBloodReq } from '@/lib/action';
 import React from 'react';
+import Swal from 'sweetalert2';
 
-const UserNotifyForm = ({userInfo}) => {
+
+
+const UserNotifyForm = ({ userInfo }) => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const bloodReq = new FormData(e.currentTarget);
+        const formData = Object.fromEntries(bloodReq.entries());
+        const data = await postBloodReq(formData);
+        if (data.acknowledged) {
+            Swal.fire({
+                title: "Blood Request Send !",
+                icon: "success",
+                draggable: true
+            });
+            e.target.reset();
+        }
+        else{
+            Swal.fire({
+                title: "Failed !",
+                icon: "warning",
+                draggable: true
+            });
+        }
+        return data;
+    }
+
     return (
         <div className=''>
-            <form className="bg-white border-red-100 rounded-3xl p-8 space-y-6 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white border-red-100 rounded-3xl p-8 space-y-6 shadow-sm">
 
                 {/* heading */}
                 <div>
@@ -23,6 +52,7 @@ const UserNotifyForm = ({userInfo}) => {
                     </label>
 
                     <input
+                        name='name'
                         type="text"
                         placeholder="Jane Doe"
                         className="
@@ -51,6 +81,7 @@ const UserNotifyForm = ({userInfo}) => {
 
                         <input
                             type="email"
+                            name='email'
                             placeholder="you@example.com"
                             className="
                     w-full
@@ -74,6 +105,7 @@ const UserNotifyForm = ({userInfo}) => {
                         </label>
 
                         <input
+                            name='phone'
                             type="text"
                             placeholder="+1 555 123 4567"
                             className="
@@ -102,6 +134,7 @@ const UserNotifyForm = ({userInfo}) => {
                     </label>
 
                     <textarea
+                        name='hospital-address'
                         rows={4}
                         placeholder="Hospital name, street, city"
                         className="

@@ -12,6 +12,7 @@ const FeaturedCard = ({donor}) => {
                     <Image
                     src={donor.image}
                     fill
+                    sizes='(max-width: 768px) 100vw, 400px'
                     alt={donor.name}
                     className="h-full w-full object-cover absolute"
                 />

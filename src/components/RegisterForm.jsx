@@ -72,12 +72,12 @@ const RegisterForm = () => {
         });
         console.log(data, error);
         if (data.user) {
-            console.log(data);
             Swal.fire({
                 title: "Register Successfully!",
                 icon: "success",
                 draggable: true
             });
+            form.reset();
             redirect('/')
 
         }
@@ -85,7 +85,6 @@ const RegisterForm = () => {
             setErr(error.message)
         }
 
-        form.reset();
     };
 
     return (

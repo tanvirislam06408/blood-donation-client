@@ -1,5 +1,6 @@
 import { ArrowRight, Calendar, LocateIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const FeaturedCard = ({donor}) => {
@@ -7,7 +8,7 @@ const FeaturedCard = ({donor}) => {
         <div className=" overflow-hidden rounded-2xl border border-zinc-200 bg-white transition duration-200 hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900">
 
             <div className="relative w-full overflow-hidden bg-zinc-200">
-                <div className='relative md:max-h-[450px] aspect-square'>
+                <div className='relative h-[250px] '>
                     <Image
                     src={donor.image}
                     fill
@@ -54,10 +55,10 @@ const FeaturedCard = ({donor}) => {
                     Last donated: {donor.lastDonation}
                 </div>
 
-                <button className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700 active:scale-[0.98]">
+                <Link href={`/all-donor/${donor._id}`} className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700 active:scale-[0.98]">
                     View Details
                     <ArrowRight />
-                </button>
+                </Link>
             </div>
         </div>
     );

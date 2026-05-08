@@ -3,6 +3,7 @@ import React from 'react';
 import FeaturedCard from './shared/FeaturedCard';
 import { Button } from '@heroui/react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const Featured = async () => {
     const userData = await getUserData();
@@ -16,7 +17,7 @@ const Featured = async () => {
                 <div>
                 </div>
                 <div>
-                    <Button variant='outline'>View All <ArrowRight /></Button>
+                   <Link href={'/all-donor'}><Button variant='outline'>View All <ArrowRight /></Button></Link>
                 </div>
             </div>
             <dir className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5'>

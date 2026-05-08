@@ -3,7 +3,7 @@
 
 export const postBloodReq = async (formData) => {
 
-    const res = await fetch(`http://localhost:5000/blood-req`, {
+    const res = await fetch(`${process.env.PORT_SERVER}/blood-req`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

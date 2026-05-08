@@ -10,12 +10,12 @@ const Navbar = () => {
         <nav className='bg-gray-50 border-b border-gray-200 py-3.5 backdrop:blur px-2.5'>
             <div className="container mx-auto flex gap-3 justify-between">
 
-                <div className='flex gap-2 items-center mt-3 ' >
+                <Link href={'/'} className='flex gap-2 items-center mt-3 ' >
                     <div className='h-9 w-9 justify-center rounded-xl gradient-primary items-center flex'>
                         <Droplet className='h-5  w-5  text-white' fill='currentColor' />
                     </div>
                     <h1 className='text-xl font-bold tracking-tight'> Blood<span className='text-primary'>Bridge</span></h1>
-                </div>
+                </Link>
                 <ul className=' items-center gap-5 hidden md:flex'>
                     <Navlinks href={'/'}>Home </Navlinks>
                     <Navlinks href={'/all-donor'}>All Donors</Navlinks>

@@ -79,7 +79,7 @@ const BloodChart = () => {
 
                 <div className="mt-14 overflow-hidden rounded-3xl border border-[#f2e7e7] bg-white">
 
-                    <Table aria-label="Blood compatibility table" classNames={'w-full'}>
+                    <Table aria-label="Blood compatibility table" className={'w-full'}>
                         <Table.Content>
                             <TableHeader className={'bg-red-50 '}>
                                 <TableColumn className={'text-lg text-black'}>Blood Group</TableColumn>

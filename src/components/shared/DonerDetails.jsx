@@ -25,7 +25,7 @@ const DonerDetails = ({userInfo}) => {
             description
         } = userInfo;
     return (
-        <div className='max-w-md space-y-5 shadow border border-gray-300 p-4 rounded-3xl'>
+        <div className=' space-y-5 shadow border border-gray-300 p-4 rounded-3xl'>
 
                     <div className='relative w-full h-[350px]'>
                         <Image

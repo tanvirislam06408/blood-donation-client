@@ -2,6 +2,7 @@ import { Droplet } from 'lucide-react';
 import Image from 'next/image';
 import bannerImg from '../assets/hero-donate.jpg'
 import { Button } from '@heroui/react';
+import Link from 'next/link';
 
 const Banner = () => {
     return (
@@ -15,7 +16,7 @@ const Banner = () => {
                     <h1 className='text-4xl md:text-6xl font-bold mt-3'>Save Lives by <br /> <span className='text-primary'>Donating Blood</span></h1>
                     <p className='text-lg mt-8 text-muted max-w-xl'>Join thousands of heroes around the world. Find verified donors near you, request blood in emergencies, or become a donor in just a few clicks.</p>
                    <div className="flex items-center gap-3 mt-3">
-                     <Button variant='primary' className={'gradient-primary font-medium '}>Find Donor</Button>
+                     <Link href="/all-donor"><Button variant='primary' className={'gradient-primary font-medium '}>Find Donor</Button></Link>
                     <Button variant='outline'>Become a Donor</Button>
                    </div>
                 </div>

@@ -69,6 +69,7 @@ const LoginForm = () => {
             form.reset();
 
             router.push("/");
+            router.refresh();
         }
 
         if (error) {

@@ -1,11 +1,22 @@
+
 import { Droplet } from 'lucide-react';
 import React from 'react';
 import Navlinks from './Navlinks';
-import { Button } from '@heroui/react';
+import { Avatar, AvatarFallback, AvatarImage, Button } from '@heroui/react';
 import Link from 'next/link';
 import { SideNav } from './SideNav';
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
+import { authClient } from '@/lib/auth.client';
+import LogOUt from './LogOUt';
 
-const Navbar = () => {
+const Navbar = async () => {
+
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
+    const user = session?.user;
+
     return (
         <nav className='bg-gray-50 border-b border-gray-200 py-3.5 backdrop:blur px-2.5'>
             <div className="container mx-auto flex gap-3 justify-between">
@@ -22,11 +33,27 @@ const Navbar = () => {
                     <Navlinks href={'/profile'}>Profile </Navlinks>
                 </ul>
                 <div className='md:flex hidden items-center gap-3.5'>
-                        <Link href={'/login'}><Button variant='danger-soft'>Login</Button></Link>
-                        <Link href={'/register'}><Button variant='danger'>Register</Button></Link>
+                    {
+                        user ? (
+                            <div className='flex items-center gap-3.5'>
+                               <Link href={'/profile'}>
+                                <Avatar>
+                                    <AvatarImage src={user.image} />
+                                    <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                               </Link>
+                               <LogOUt/>
+                            </div>
+                        ) : (
+                            <><Link href={'/login'}><Button variant='danger-soft'>Login</Button></Link>
+                                <Link href={'/register'}><Button variant='danger'>Register</Button></Link>
+                            </>
+
+                        )
+                    }
                 </div>
                 <div className="md:hidden">
-                    <SideNav/>
+                    <SideNav />
                 </div>
             </div>
         </nav>

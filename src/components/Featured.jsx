@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 const Featured = async () => {
     const userData = await getUserData();
-    console.log(userData);
 
     return (
         <div className='mx-auto container mt-4 px-4 md:px-0 mt-28'>

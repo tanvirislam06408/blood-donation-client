@@ -1,5 +1,6 @@
 "use client";
 
+import UpdateProfile from "@/components/UpdateProfile";
 import { authClient } from "@/lib/auth.client";
 import { Button, Card } from "@heroui/react";
 import {
@@ -108,12 +109,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          <Button
-            className="w-full mt-8 bg-gradient-to-r from-red-500 to-rose-500 text-white font-semibold h-12 rounded-2xl shadow-lg hover:scale-[1.02] transition-all duration-300"
-            startContent={<Pencil size={18} />}
-          >
-            Update Profile <SquarePen />
-          </Button>
+          <UpdateProfile/>
         </div>
       </Card>
     </div>

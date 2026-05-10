@@ -5,12 +5,12 @@ import { Droplet, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { authClient } from "@/lib/auth.client";
 import Swal from "sweetalert2";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 const RegisterForm = () => {
 
     const [showPassword, setShowPassword] = useState(false);
-
+    const router=useRouter();
     const [errors, setErrors] = useState({
         name: "",
         email: "",
@@ -78,6 +78,7 @@ const RegisterForm = () => {
                 draggable: true
             });
             form.reset();
+            router.refresh();
             redirect('/')
 
         }

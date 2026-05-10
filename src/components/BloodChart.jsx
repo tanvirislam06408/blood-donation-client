@@ -82,7 +82,7 @@ const BloodChart = () => {
                     <Table aria-label="Blood compatibility table" className={'w-full'}>
                         <Table.Content>
                             <TableHeader className={'bg-red-50 '}>
-                                <TableColumn className={'text-lg text-black'}>Blood Group</TableColumn>
+                                <TableColumn isRowHeader className={'text-lg text-black'}>Blood Group</TableColumn>
                                 <TableColumn className={'text-lg text-black'}>Can Give To</TableColumn>
                                 <TableColumn className={'text-lg text-black'}>Can Receive From</TableColumn>
                             </TableHeader>

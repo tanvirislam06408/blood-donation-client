@@ -1,16 +1,23 @@
 
 import { Bars, Bell, Envelope, Gear, House, Magnifier, Person } from "@gravity-ui/icons";
-import { Button, Drawer } from "@heroui/react";
-import { Droplet } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage, Button, Drawer } from "@heroui/react";
+import { Droplet, LogOut, SquarePen } from "lucide-react";
 import Link from "next/link";
+import LogOUt from "./LogOUt";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
-export function SideNav() {
+export async function SideNav () {
     const navItems = [
         { icon: House, label: "Home", href: '/' },
         { icon: Droplet, label: "All Donors", href: '/all-donor' },
         { icon: Person, label: "Profile", href: '/profile' },
     ];
 
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
+    const user = session?.user;
     return (
         <Drawer>
             <Button variant="secondary">
@@ -33,7 +40,8 @@ export function SideNav() {
                         </Drawer.Header>
                         <Drawer.Body>
                             <nav className="flex flex-col gap-1">
-                                {navItems.map((item) => (
+                                <div>
+                                    {navItems.map((item) => (
                                     <Link
                                         href={item.href}
                                         key={item.label}
@@ -44,6 +52,21 @@ export function SideNav() {
                                         {item.label}
                                     </Link>
                                 ))}
+                                </div>
+
+                                <div className='flex flex-col'>
+                                   
+                                    {
+                                        user ? (
+                                            <div className='flex items-center'>
+                                               
+                                                <LogOUt />
+                                            </div>
+                                        ) : (
+                                        <Link href={'/login'}><Button variant='danger-soft ' className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-default"><SquarePen /> Login</Button></Link>        
+                                        )
+                                    }
+                                </div>
                             </nav>
                         </Drawer.Body>
                     </Drawer.Dialog>

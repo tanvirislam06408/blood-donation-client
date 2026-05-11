@@ -71,7 +71,7 @@ const UserNotifyForm = ({ userInfo }) => {
                     />
                 </div>
 
-                {/* email + phone */}
+               
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                     <div className="space-y-2">
@@ -154,7 +154,7 @@ const UserNotifyForm = ({ userInfo }) => {
                     />
                 </div>
 
-                {/* button */}
+                
                 <button
                     type="submit"
                     className="

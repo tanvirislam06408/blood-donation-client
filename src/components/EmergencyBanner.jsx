@@ -23,7 +23,7 @@ const EmergencyBanner = () => {
         {/* left content */}
         <div className="space-y-4">
 
-          {/* badge */}
+       
           <div
             className="
               inline-flex
@@ -43,7 +43,7 @@ const EmergencyBanner = () => {
             EMERGENCY
           </div>
 
-          {/* title */}
+         
           <div className="space-y-2">
 
             <h2 className="text-4xl font-bold text-white">
@@ -58,7 +58,7 @@ const EmergencyBanner = () => {
           </div>
         </div>
 
-        {/* button */}
+      
         <Link
           href="/all-donor"
           className="

@@ -47,7 +47,7 @@ const DonerDetails = ({userInfo}) => {
                         </p>
                     </div>
 
-                    {/* info */}
+                 
                     <div className='space-y-4 pt-3'>
 
                         <div className='flex items-center gap-3'>

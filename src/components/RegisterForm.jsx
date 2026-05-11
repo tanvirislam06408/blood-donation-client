@@ -93,7 +93,7 @@ const RegisterForm = () => {
 
             <div className="w-full max-w-md rounded-[32px] border border-red-100 bg-white p-8 shadow-sm">
 
-                {/* logo */}
+              
                 <div className="flex flex-col items-center text-center">
 
                     <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 to-red-400">
@@ -120,7 +120,7 @@ const RegisterForm = () => {
                     className="mt-10 space-y-5"
                 >
 
-                    {/* name */}
+                   
                     <div className="space-y-2">
 
                         <label className="text-sm font-medium text-gray-700">
@@ -200,14 +200,14 @@ const RegisterForm = () => {
                         <p className="text-red-500 text-sm">{err}</p>
                     </div>
 
-                    {/* button */}
+                    
                     <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-red-600 to-red-400 py-3 font-semibold text-white transition-all hover:scale-[1.01]">
                         Register
                     </button>
 
                 </form>
 
-                {/* divider */}
+               
                 <div className="my-8 flex items-center gap-4">
 
                     <div className="h-px flex-1 bg-gray-200"></div>
@@ -220,12 +220,12 @@ const RegisterForm = () => {
 
                 </div>
 
-                {/* google */}
+               
                 <button className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl border border-gray-200 bg-white py-3 font-medium transition-all hover:bg-gray-50">
                     Continue with Google
                 </button>
 
-                {/* login */}
+                
                 <p className="mt-8 text-center text-gray-500">
 
                     Already have an account?{" "}

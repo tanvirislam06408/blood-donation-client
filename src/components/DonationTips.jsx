@@ -28,7 +28,7 @@ export default function DonationTips() {
     <section className="bg-[#faf6f7] py-15 mt-6">
       <div className="mx-auto container px-4">
 
-        {/* Heading */}
+       
         <div className="text-center">
           <h2 className="text-4xl font-bold tracking-tight text-[#1b0b0b]">
             Blood Donation Tips

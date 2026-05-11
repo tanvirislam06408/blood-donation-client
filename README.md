@@ -6,8 +6,8 @@ BloodBridge is a centralized platform designed to facilitate blood donation by c
 
 ## Live Site and Screenshots
 
-- **Live Application**: [Link Placeholder]
-- **Interface Preview**: [Screenshot Placeholder]
+- **Live Application**: [blood-donation-client-two.vercel.app](https://blood-donation-client-two.vercel.app/)
+- **Interface Preview**: [![Interface Preview](https://i.ibb.co/Q3C65SCt/blood-donation-client-two-vercel-app.png)](https://blood-donation-client-two.vercel.app/)
 
 ---
 

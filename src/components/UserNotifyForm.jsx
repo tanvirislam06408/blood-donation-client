@@ -34,7 +34,7 @@ const UserNotifyForm = ({ userInfo }) => {
         <div className=''>
             <form onSubmit={handleSubmit} className="bg-white border-red-100 rounded-3xl p-8 space-y-6 shadow-sm">
 
-                {/* heading */}
+               
                 <div>
                     <h2 className="text-3xl font-bold text-gray-900">
                         Request Blood

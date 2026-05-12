@@ -3,6 +3,8 @@ import Image from 'next/image';
 import bannerImg from '../assets/hero-donate.jpg'
 import { Button } from '@heroui/react';
 import Link from 'next/link';
+import AddDonor from './AddDonor';
+
 
 const Banner = () => {
     return (
@@ -17,7 +19,8 @@ const Banner = () => {
                     <p className='text-lg mt-8 text-muted max-w-xl'>Join thousands of heroes around the world. Find verified donors near you, request blood in emergencies, or become a donor in just a few clicks.</p>
                    <div className="flex items-center gap-3 mt-3">
                      <Link href="/all-donor"><Button variant='primary' className={'gradient-primary font-medium '}>Find Donor</Button></Link>
-                    <Button variant='outline'>Become a Donor</Button>
+                    
+                   <AddDonor/>
                    </div>
                 </div>
                 <div className='relative mb-10'>

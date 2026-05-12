@@ -6,6 +6,7 @@ import { useState } from "react";
 import { authClient } from "@/lib/auth.client";
 import Swal from "sweetalert2";
 import { redirect, useRouter } from "next/navigation";
+import SocialLogin from "./shared/SocialLogin";
 
 const RegisterForm = () => {
 
@@ -221,10 +222,7 @@ const RegisterForm = () => {
                 </div>
 
                
-                <button className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-2xl border border-gray-200 bg-white py-3 font-medium transition-all hover:bg-gray-50">
-                    Continue with Google
-                </button>
-
+                <SocialLogin/>
                 
                 <p className="mt-8 text-center text-gray-500">
 

@@ -1,6 +1,6 @@
 import { Droplet } from 'lucide-react';
 import Image from 'next/image';
-import bannerImg from '../assets/hero-donate.jpg'
+import bannerImg from '../assets/hero-donate.png'
 import { Button } from '@heroui/react';
 import Link from 'next/link';
 import AddDonor from './AddDonor';

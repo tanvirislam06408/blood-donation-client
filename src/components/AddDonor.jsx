@@ -10,8 +10,9 @@ const AddDonor = () => {
           e.preventDefault();
           const bloodReq = new FormData(e.currentTarget);
           const formData = Object.fromEntries(bloodReq.entries());
+          console.log(formData);
           
-          const res=await fetch(`${process.env.PORT_SERVER}/users`,{
+          const res=await fetch(`https://blood-donation-server-rxws.onrender.com/users`,{
             method:'POST',
             headers:{
               'content-type':'application/json'
@@ -51,12 +52,12 @@ const AddDonor = () => {
               </Modal.Icon>
               
             </Modal.Header>
-            <Modal.Body className="p-6">
+            <Modal.Body className="md:p-6">
               <Surface variant="default">
 
 
                 
-                <form onSubmit={handleSubmit}  className="bg-white border-red-100 rounded-3xl p-8 space-y-6 shadow-sm">
+                <form onSubmit={handleSubmit}  className="bg-white border-red-100  rounded-3xl p-2.5 md:p-8 space-y-6 shadow-sm">
 
                 
                 <div>
